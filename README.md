@@ -1,4 +1,2 @@
 # SeeFood
-Classifying Food with CoreML Model 
-
-Inspired by Silicon Valley, the TV show :)
+Classifying objects with CoreML Model: Inceptionv3
