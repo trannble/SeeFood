@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
