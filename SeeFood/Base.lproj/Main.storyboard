@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WHAT OBJECT IS THIS?-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SeeFood" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,19 +16,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDc-uB-SLt">
-                                <rect key="frame" x="20" y="20" width="374" height="856"/>
+                                <rect key="frame" x="20" y="156" width="374" height="720"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYp-re-gY0" userLabel="objectResult">
+                                <rect key="frame" x="44" y="104" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="30"/>
+                                <color key="textColor" red="0.96470588239999999" green="0.81960784310000001" blue="0.029075384456164408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.84154661289999999" green="0.96130555870000001" blue="0.94861555949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="tDc-uB-SLt" secondAttribute="bottom" constant="20" symbolic="YES" id="7SE-ve-GLw"/>
                             <constraint firstItem="tDc-uB-SLt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="9qf-of-ryJ"/>
                             <constraint firstAttribute="trailing" secondItem="tDc-uB-SLt" secondAttribute="trailing" constant="20" symbolic="YES" id="FJn-aB-Kod"/>
-                            <constraint firstItem="tDc-uB-SLt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="mZI-95-zWI"/>
+                            <constraint firstItem="rYp-re-gY0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="RmQ-5P-ri8"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rYp-re-gY0" secondAttribute="trailing" constant="20" symbolic="YES" id="Zv8-T1-D20"/>
+                            <constraint firstItem="tDc-uB-SLt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="156" id="mZI-95-zWI"/>
+                            <constraint firstItem="rYp-re-gY0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="16" id="wm3-db-bJf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zYv-6E-eeD">
+                    <navigationItem key="navigationItem" title="WHAT OBJECT IS THIS?" id="zYv-6E-eeD">
                         <barButtonItem key="rightBarButtonItem" systemItem="camera" id="evQ-ah-Csv">
                             <connections>
                                 <action selector="cameraTapped:" destination="BYZ-38-t0r" id="cxd-sA-EjW"/>
@@ -36,6 +45,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="displayResult" destination="rYp-re-gY0" id="yuP-pr-mcU"/>
                         <outlet property="foodImageView" destination="tDc-uB-SLt" id="eBx-sW-wxs"/>
                     </connections>
                 </viewController>

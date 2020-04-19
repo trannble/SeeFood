@@ -11,7 +11,10 @@ import CoreML
 import Vision
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
-
+    
+    
+    @IBOutlet weak var displayResult: UILabel!
+    
     @IBOutlet weak var foodImageView: UIImageView!
     
     //for user to pick image from camera roll
@@ -58,11 +61,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         //create request to process image in CoreML model
         let request = VNCoreMLRequest(model: model) { (request, error) in
+            
             guard let results = request.results as? [VNClassificationObservation] else {
                 fatalError("Could not get classification observation of image")
             }
             
-            print(results)
+            //check results in console: print(results)
+            
+            //get the first result of model
+            if let firstResult = results.first {
+                self.displayResult.text = firstResult.identifier
+            }
         }
         
         //specify which image to classify
